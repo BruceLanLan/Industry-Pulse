@@ -1,0 +1,5 @@
+{
+  "name": "IndustryPulse",
+  "description": "An AI-powered morning briefing and industry news aggregation platform that automates information collection using Gemini Search.",
+  "requestFramePermissions": []
+}
