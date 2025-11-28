@@ -1,6 +1,6 @@
 import React from 'react';
 import { ViewMode, UserProfile } from '../types';
-import { LayoutDashboard, Newspaper, Settings, Zap, Bookmark, Coins, LogIn, CandlestickChart, LayoutTemplate } from 'lucide-react';
+import { LayoutDashboard, Newspaper, Settings, Zap, Bookmark, Coins, LogIn, CandlestickChart, LayoutTemplate, Twitter } from 'lucide-react';
 
 interface SidebarProps {
   currentView: ViewMode;
@@ -49,6 +49,22 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, user, onOp
       </nav>
 
       <div className="p-4 border-t border-slate-800">
+        {/* Creator Twitter Link */}
+        <a 
+            href="https://x.com/BruceLLBlue" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 mb-6 px-3 py-2.5 rounded-xl bg-gradient-to-r from-blue-900/40 to-slate-800 border border-blue-500/30 hover:border-blue-400 hover:from-blue-900/60 transition-all group"
+        >
+            <div className="p-1.5 bg-blue-500 text-white rounded-lg shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform duration-300">
+                <Twitter size={16} fill="currentColor" />
+            </div>
+            <div>
+                <p className="text-[10px] text-blue-300 font-semibold uppercase tracking-wider mb-0.5">Follow Creator</p>
+                <p className="text-sm font-bold text-white group-hover:text-blue-200 transition-colors">@BruceLLBlue</p>
+            </div>
+        </a>
+
         {user ? (
             <div className="flex items-center gap-3 mb-4 p-2 bg-slate-800 rounded-lg">
                 <img src={user.avatar} alt="Avatar" className="w-8 h-8 rounded-full bg-slate-600" />
